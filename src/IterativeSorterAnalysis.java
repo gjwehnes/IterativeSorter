@@ -24,7 +24,7 @@ public class IterativeSorterAnalysis {
 	
 	private void analyseRandom() {
 			
-		System.out.print(String.format("%6s", ""));
+		System.out.print(String.format("%6s", "n"));
 		for (int i = 0; i < 6; i++) {
 			System.out.print(String.format("%12s\t","random"));			
 		}
@@ -35,7 +35,7 @@ public class IterativeSorterAnalysis {
 			System.out.print(String.format("%12s\t","reverse"));			
 		}
 		for (int i = 0; i < 6; i++) {
-			System.out.print(String.format("%12s\t","few unique"));			
+			System.out.print(String.format("%12s\t","few_unique"));			
 		}
 		
 		System.out.println();
