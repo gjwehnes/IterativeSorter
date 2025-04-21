@@ -19,9 +19,9 @@ public class IterativeSorterPerformance {
 		System.out.println();
 
 		System.out.print(formatHeader("n"));
-		System.out.print(formatHeader("BS").repeat(2) +
+		System.out.print((formatHeader("BS").repeat(2) +
 							formatHeader("IS").repeat(2) +
-							formatHeader("SS").repeat(2));
+							formatHeader("SS").repeat(2)).repeat(4));
 		System.out.println();
 		
 		System.out.print(formatHeader("n"));
@@ -34,11 +34,11 @@ public class IterativeSorterPerformance {
 		for (int n = 1000; n <= 10000; n+=1000){
 			
 			if (n == 10000) {
-				System.out.println("------");
+				System.out.println(formatHeader("---").repeat(24));
 			}
 			double n_squared = n * n;
 			IntegerArray arrayToSort = null;
-			System.out.print(formatHeader(String.format("%6d\t",n)));
+			System.out.print(formatHeader(String.format("%6d",n)));
 			
 			///////////////////////////////////RANDOM
 			arrayToSort = utility.createRandomArray(n);
