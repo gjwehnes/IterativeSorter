@@ -1,4 +1,4 @@
-//2023/12/25
+//2025/04/21
 import java.util.Random;
 
 public class IterativeSorterPerformance {
@@ -9,19 +9,25 @@ public class IterativeSorterPerformance {
         SorterUtilities utility = new SorterUtilities();        
 	    Random generator = new Random();
         generator.setSeed(12345);
-
+        
 		//3 sorts x 2 metrics x 4 data sets
-		System.out.print(String.format("%6s", ""));
+		System.out.print(String.format("%6s", "n"));
 		System.out.print(formatHeader("random").repeat(6));			
 		System.out.print(formatHeader("nearly").repeat(6));			
 		System.out.print(formatHeader("reverse").repeat(6));			
-		System.out.print(formatHeader("few unique").repeat(6));			
+		System.out.print(formatHeader("few_unique").repeat(6));			
+		System.out.println();
+
+		System.out.print(String.format("%6s\t", "n"));
+		System.out.print(formatHeader("BS").repeat(2) +
+							formatHeader("IS").repeat(2) +
+							formatHeader("SS").repeat(2));
 		System.out.println();
 		
 		System.out.print(String.format("%6s\t", "n"));
-		System.out.print( (formatHeader("BS T(n)/n^2") + formatHeader("BS S(n)/n^2") +
-							formatHeader("IS T(n)/n^2") + formatHeader("IS S(n)/n^2") +
-							formatHeader("SS T(n)/n^2") + formatHeader("SS S(n)/n^2") ).repeat(4));
+		System.out.print( (formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") +
+							formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") +
+							formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") ).repeat(4));
 
 		System.out.println();
 				
