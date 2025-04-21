@@ -11,20 +11,20 @@ public class IterativeSorterPerformance {
         generator.setSeed(12345);
         
 		//3 sorts x 2 metrics x 4 data sets
-		System.out.print(String.format("%6s", "n"));
+		System.out.print(formatHeader("n"));
 		System.out.print(formatHeader("random").repeat(6));			
 		System.out.print(formatHeader("nearly").repeat(6));			
 		System.out.print(formatHeader("reverse").repeat(6));			
 		System.out.print(formatHeader("few_unique").repeat(6));			
 		System.out.println();
 
-		System.out.print(String.format("%6s\t", "n"));
+		System.out.print(formatHeader("n"));
 		System.out.print(formatHeader("BS").repeat(2) +
 							formatHeader("IS").repeat(2) +
 							formatHeader("SS").repeat(2));
 		System.out.println();
 		
-		System.out.print(String.format("%6s\t", "n"));
+		System.out.print(formatHeader("n"));
 		System.out.print( (formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") +
 							formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") +
 							formatHeader("T(n)/n^2") + formatHeader("S(n)/n^2") ).repeat(4));
@@ -38,7 +38,7 @@ public class IterativeSorterPerformance {
 			}
 			double n_squared = n * n;
 			IntegerArray arrayToSort = null;
-			System.out.print(String.format("%6d\t",n));
+			System.out.print(formatHeader(String.format("%6d\t",n)));
 			
 			///////////////////////////////////RANDOM
 			arrayToSort = utility.createRandomArray(n);
